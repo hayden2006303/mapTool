@@ -383,8 +383,8 @@ export default {
           }
           makerObj.events = {
             dblclick: () => {
-              this.lnglatpoints[this.pIdx] = this.lnglatpoints[this.pIdx].filter(itt => itt.latitude !== item.position[1] && itt.longitude !== item.position[0])
-              this.markers[this.pIdx] = this.markers[this.pIdx].filter(itt => itt.position[1] !== item.position[1] && itt.position[0] !== item.position[0])
+              this.lnglatpoints[this.pIdx] = this.lnglatpoints[this.pIdx].filter(itt => itt.latitude !== e.position[1] && itt.longitude !== e.position[0])
+              this.markers[this.pIdx] = this.markers[this.pIdx].filter(itt => itt.position[1] !== e.position[1] && itt.position[0] !== e.position[0])
               this.markers[this.pIdx].map((ite, index) => {// 重写这个让坐标内容标识数字从新渲染
                 ite.label = {
                   offset: [12, -20], // 设置文本标注偏移量
