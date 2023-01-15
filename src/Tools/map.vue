@@ -382,7 +382,7 @@ export default {
             content: `<div style='background-color: ${_this.rangePointColor}; padding:2px'>${index + 1}</div>`, // 设置文本标注内容
           }
           makerObj.events = {
-            dblclick: () => {
+            dblclick: (e) => {
               const lnglat = e.target.getPosition();
               this.lnglatpoints[this.pIdx] = this.lnglatpoints[this.pIdx].filter(itt => itt.latitude !== lnglat.lat && itt.longitude !== lnglat.lng)
               this.markers[this.pIdx] = this.markers[this.pIdx].filter(itt => itt.position[1] !== lnglat.lat && itt.position[0] !== lnglat.lng)
